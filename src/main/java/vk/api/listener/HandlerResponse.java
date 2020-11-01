@@ -30,9 +30,6 @@ public class HandlerResponse {
         List<Message> messages = vkCore.getMessage();
         if (messages != null) {
             for (Message message : messages) {
-                if (message != null) {
-//                    parseCommands.parseCommands(message);
-                }
                 rabbitProducer.putInQueue(message);
             }
         }

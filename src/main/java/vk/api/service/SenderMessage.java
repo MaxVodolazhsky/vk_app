@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SenderMessage {
-    private VkApiClient vkApiClient;
-    private GroupActor groupActor;
+    private final VkApiClient vkApiClient;
+    private final GroupActor groupActor;
 
     public SenderMessage(VkApiClient vkApiClient, GroupActor groupActor) {
         this.vkApiClient = vkApiClient;
